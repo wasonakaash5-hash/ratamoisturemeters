@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wason Instruments — Digital Moisture Meters</title>
+<meta name="description" content="Manufacturer of digital grain moisture meters since 1999. Request a quote, download the catalog, or get in touch.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf6ee;
+    --wheat:#f0e6cf;
+    --ink:#211c12;
+    --ink-dim:#6b6252;
+    --green:#3f5d3a;
+    --green-deep:#2c4228;
+    --rust:#b8591f;
+    --line:#e2d8bd;
+    --white:#ffffff;
+    --serif:'Fraunces', serif;
+    --sans:'Inter', sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  ul{list-style:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  @media(max-width:640px){.wrap{padding:0 20px;}}
+  section{padding:96px 0;}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-0.01em;}
+
+  /* TOP BAR */
+  .topbar{background:var(--green-deep);color:#e9e4d4;font-size:13px;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:38px;flex-wrap:wrap;}
+  .topbar a:hover{color:#fff;}
+
+  /* NAV */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,246,238,0.95);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
+  .brand{font-family:var(--serif);font-size:22px;font-weight:700;color:var(--green-deep);}
+  .brand span{color:var(--rust);}
+  nav{display:flex;gap:30px;}
+  nav a{font-size:14.5px;font-weight:500;color:var(--ink);}
+  nav a:hover{color:var(--rust);}
+  .nav-cta{
+    background:var(--rust);color:#fff;padding:11px 20px;border-radius:4px;font-weight:600;font-size:14px;
+  }
+  .nav-cta:hover{background:#9c4a19;}
+  .nav-toggle{display:none;background:none;border:0;font-size:24px;cursor:pointer;color:var(--ink);}
+  @media(max-width:900px){
+    nav{position:fixed;top:76px;left:0;right:0;background:var(--white);flex-direction:column;padding:24px 32px;gap:18px;border-bottom:1px solid var(--line);display:none;}
+    nav.open{display:flex;}
+    .nav-cta{display:none;}
+    .nav-toggle{display:block;}
+  }
+
+  /* HERO */
+  .hero{
+    padding:100px 0 90px;
+    background:
+      radial-gradient(circle at 85% 20%, rgba(63,93,58,0.10), transparent 55%),
+      var(--wheat);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;}
+  @media(max-width:880px){.hero-grid{grid-template-columns:1fr;}}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--green-deep);color:#fff;font-size:12.5px;font-weight:600;
+    padding:7px 14px;border-radius:999px;margin-bottom:22px;
+  }
+  h1.hero-title{font-size:clamp(36px,5vw,54px);line-height:1.08;margin-bottom:22px;}
+  .hero-title em{color:var(--rust);font-style:italic;}
+  .hero-copy{font-size:17px;color:var(--ink-dim);max-width:480px;margin-bottom:32px;}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{padding:14px 26px;border-radius:4px;font-weight:600;font-size:14.5px;display:inline-block;}
+  .btn-solid{background:var(--green-deep);color:#fff;}
+  .btn-solid:hover{background:var(--green);}
+  .btn-outline{border:1.5px solid var(--ink);color:var(--ink);}
+  .btn-outline:hover{border-color:var(--rust);color:var(--rust);}
+  .hero-stats{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap;}
+  .hero-stats b{display:block;font-family:var(--serif);font-size:30px;color:var(--green-deep);}
+  .hero-stats span{font-size:13px;color:var(--ink-dim);}
+
+  .hero-visual{
+    aspect-ratio:1/1;
+    background:linear-gradient(155deg,#fff,var(--wheat));
+    border:1px solid var(--line);
+    border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+  }
+  .hero-visual .badge{
+    position:absolute;top:20px;right:20px;
+    background:var(--rust);color:#fff;font-size:12px;font-weight:600;
+    padding:6px 12px;border-radius:999px;
+  }
+  .hero-visual .meter-icon{font-size:120px;}
+
+  /* SECTION HEAD */
+  .section-head{max-width:600px;margin-bottom:56px;}
+  .kicker{font-size:13px;font-weight:600;color:var(--rust);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:12px;}
+  .section-head h2{font-size:clamp(28px,3.4vw,38px);}
+  .section-head p{color:var(--ink-dim);margin-top:14px;font-size:16px;}
+
+  /* PRODUCTS */
+  .product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  @media(max-width:900px){.product-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:620px){.product-grid{grid-template-columns:1fr;}}
+  .product-card{
+    background:var(--white);border:1px solid var(--line);border-radius:10px;
+    padding:26px;display:flex;flex-direction:column;gap:14px;transition:box-shadow .2s, transform .2s;
+  }
+  .product-card:hover{box-shadow:0 14px 30px rgba(44,66,40,0.10);transform:translateY(-3px);}
+  .product-thumb{
+    aspect-ratio:4/3;background:var(--wheat);border-radius:6px;
+    display:flex;align-items:center;justify-content:center;font-size:52px;
+  }
+  .product-tag{font-size:12px;font-weight:600;color:var(--green-deep);text-transform:uppercase;letter-spacing:0.04em;}
+  .product-card h3{font-size:19px;}
+  .product-card p{font-size:14px;color:var(--ink-dim);}
+  .product-price{margin-top:auto;display:flex;justify-content:space-between;align-items:center;padding-top:10px;border-top:1px solid var(--line);}
+  .product-price b{font-family:var(--serif);font-size:19px;color:var(--rust);}
+  .product-price a{font-size:13.5px;font-weight:600;color:var(--green-deep);}
+  .product-price a:hover{color:var(--rust);}
+
+  /* WHY US */
+  .why-section{background:var(--green-deep);color:#f1ede0;}
+  .why-section .kicker{color:#c9e0c4;}
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:16px;}
+  @media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.why-grid{grid-template-columns:1fr;}}
+  .why-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:10px;padding:26px;}
+  .why-card .num{font-family:var(--serif);font-size:15px;color:#d9a67a;margin-bottom:14px;}
+  .why-card h3{font-size:18px;color:#fff;margin-bottom:10px;}
+  .why-card p{font-size:14px;color:#cfc9b8;}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+  @media(max-width:860px){.about-grid{grid-template-columns:1fr;}}
+  .about-copy p{color:var(--ink-dim);margin-bottom:18px;font-size:16px;max-width:520px;}
+  .about-visual{
+    background:var(--wheat);border-radius:10px;border:1px solid var(--line);
+    aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:80px;
+  }
+  .about-stats{display:flex;gap:40px;margin-top:26px;flex-wrap:wrap;}
+  .about-stats b{display:block;font-family:var(--serif);font-size:28px;color:var(--green-deep);}
+  .about-stats span{font-size:13px;color:var(--ink-dim);}
+
+  /* CONTACT */
+  .contact-section{background:var(--wheat);border-top:1px solid var(--line);}
+  .contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:60px;}
+  @media(max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-info-card{
+    background:var(--white);border:1px solid var(--line);border-radius:10px;padding:30px;
+  }
+  .contact-info-card h3{font-size:20px;margin-bottom:18px;}
+  .contact-line{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);}
+  .contact-line:last-child{border-bottom:none;}
+  .contact-line .icon{font-size:20px;}
+  .contact-line b{display:block;font-size:14px;}
+  .contact-line span{font-size:13.5px;color:var(--ink-dim);}
+  .contact-line a:hover{color:var(--rust);}
+
+  form{background:var(--white);border:1px solid var(--line);border-radius:10px;padding:30px;display:flex;flex-direction:column;gap:16px;}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:520px){.form-row{grid-template-columns:1fr;}}
+  label{font-size:13px;font-weight:600;color:var(--ink);display:block;margin-bottom:6px;}
+  input, select, textarea{
+    width:100%;border:1px solid var(--line);border-radius:6px;padding:12px 14px;
+    font-family:var(--sans);font-size:14.5px;background:var(--cream);color:var(--ink);
+  }
+  input:focus, select:focus, textarea:focus{outline:none;border-color:var(--green-deep);box-shadow:0 0 0 3px rgba(63,93,58,0.15);}
+  textarea{min-height:120px;resize:vertical;}
+  .submit-btn{
+    background:var(--rust);color:#fff;border:0;padding:15px 26px;border-radius:6px;
+    font-weight:700;font-size:15px;cursor:pointer;align-self:flex-start;
+  }
+  .submit-btn:hover{background:#9c4a19;}
+  .form-note{font-size:12.5px;color:var(--ink-dim);}
+
+  footer{background:var(--green-deep);color:#c9c3b0;padding:56px 0 28px;}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+  @media(max-width:760px){.footer-grid{grid-template-columns:1fr;}}
+  .footer-grid h4{color:#fff;font-family:var(--serif);font-size:17px;margin-bottom:16px;}
+  .footer-grid ul li{margin-bottom:10px;font-size:14px;}
+  .footer-grid ul li a:hover{color:#fff;}
+  .footer-brand{font-family:var(--serif);font-size:20px;color:#fff;margin-bottom:10px;}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,0.12);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:13px;}
+
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span>ISO 9001:2015 Certified · Serving Agribusiness Since 1999</span>
+    <a href="mailto:wasonakaash5@gmail.com">wasonakaash5@gmail.com</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="#top">Wason <span>Instruments</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    <nav id="navMenu">
+      <a href="#products">Products</a>
+      <a href="#why">Why Us</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Request a Quote</a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">🌾 Grain &amp; Agri Moisture Meters</div>
+      <h1 class="hero-title">Precise moisture<br>readings, built for<br><em>the field.</em></h1>
+      <p class="hero-copy">We manufacture digital moisture meters trusted by mills, traders, and processors across India — accurate, durable, and backed by a three-year motherboard warranty.</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#products">Browse Products</a>
+        <a class="btn btn-outline" href="#contact">Request a Quote</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>25+</b><span>years manufacturing</span></div>
+        <div><b>6</b><span>meter models</span></div>
+        <div><b>ISO 9001</b><span>certified quality</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <span class="badge">New Stock</span>
+      <span class="meter-icon">🌾📟</span>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Product Range</div>
+      <h2>Digital moisture meters</h2>
+      <p>Built for paddy, wheat, maize, pulses, and oilseeds — every unit ships with a stainless steel test cup set and automatic temperature compensation.</p>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card">
+        <div class="product-thumb">📟</div>
+        <div class="product-tag">Digital Moisture Meter</div>
+        <h3>RT11</h3>
+        <p>Attached printer port · Range 8–40% · Three-year motherboard warranty.</p>
+        <div class="product-price"><b>₹34,990</b><a href="#contact">Enquire →</a></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb">📟</div>
+        <div class="product-tag">Digital Moisture Meter</div>
+        <h3>RT22</h3>
+        <p>Compact build · Stainless steel test cups · Automatic temp compensation.</p>
+        <div class="product-price"><b>₹24,990</b><a href="#contact">Enquire →</a></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb">📟</div>
+        <div class="product-tag">Digital Moisture Meter</div>
+        <h3>KETT</h3>
+        <p>Reliable entry-level unit · One-year motherboard warranty.</p>
+        <div class="product-price"><b>₹25,990</b><a href="#contact">Enquire →</a></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb">📟</div>
+        <div class="product-tag">Digital Moisture Meter</div>
+        <h3>RT01</h3>
+        <p>Printer port included · Range 8–40% · Three-year motherboard warranty.</p>
+        <div class="product-price"><b>₹27,990</b><a href="#contact">Enquire →</a></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb">📟</div>
+        <div class="product-tag">Digital Moisture Meter</div>
+        <h3>RT02</h3>
+        <p>Compact frame · Stainless test cups · Automatic temp compensation.</p>
+        <div class="product-price"><b>₹21,990</b><a href="#contact">Enquire →</a></div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb">🧪</div>
+        <div class="product-tag">Moisture Meter</div>
+        <h3>Plastic Moisture Meter</h3>
+        <p>Lightweight portable unit · One-year motherboard warranty.</p>
+        <div class="product-price"><b>₹5,990</b><a href="#contact">Enquire →</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="why-section" id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Why Wason</div>
+      <h2 style="color:#fff;">Built to last in the field</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="num">01</div>
+        <h3>ISO 9001:2015 certified</h3>
+        <p>Every unit is manufactured under a certified quality management system.</p>
+      </div>
+      <div class="why-card">
+        <div class="num">02</div>
+        <h3>Three-year warranty</h3>
+        <p>Motherboard warranty on our flagship models — built for daily heavy use.</p>
+      </div>
+      <div class="why-card">
+        <div class="num">03</div>
+        <h3>Nationwide support</h3>
+        <p>Service training and manuals available so your team stays self-sufficient.</p>
+      </div>
+      <div class="why-card">
+        <div class="num">04</div>
+        <h3>25+ years in agribusiness</h3>
+        <p>Manufacturing grain moisture analyzers for mills and traders since 1999.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-visual">🏭</div>
+    <div class="about-copy">
+      <div class="kicker">About Us</div>
+      <h2 style="margin-bottom:18px;">Manufacturing moisture analyzers since 1999</h2>
+      <p>Established in 1999, Wason Instruments is one of the leading manufacturers and exporters of grain moisture analyzers, built on decades of hands-on experience in the agribusiness industry.</p>
+      <p>Our meters are used daily by mills, traders, and processors handling paddy, wheat, maize, pulses, and oilseeds — where accuracy at scale isn't optional.</p>
+      <div class="about-stats">
+        <div><b>1999</b><span>company founded</span></div>
+        <div><b>2</b><span>manufacturing &amp; branch locations</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="kicker">Get in Touch</div>
+      <h2 style="margin-bottom:18px;">Request a quote or ask a question</h2>
+      <p style="color:var(--ink-dim);margin-bottom:28px;max-width:420px;">Send us a message below and it'll go straight to our inbox — or reach out directly using the details here.</p>
+      <div class="contact-info-card">
+        <h3>Contact details</h3>
+        <div class="contact-line">
+          <span class="icon">✉️</span>
+          <div><b>Email</b><a href="mailto:wasonakaash5@gmail.com"><span>wasonakaash5@gmail.com</span></a></div>
+        </div>
+        <div class="contact-line">
+          <span class="icon">📞</span>
+          <div><b>Phone</b><span>98151-67454</span></div>
+        </div>
+        <div class="contact-line">
+          <span class="icon">📍</span>
+          <div><b>Works</b><span>Plot No. 3, VPO Wadala, Nakodar Road, Jalandhar-144003, Punjab, India</span></div>
+        </div>
+        <div class="contact-line">
+          <span class="icon">🏢</span>
+          <div><b>Branch</b><span>Bardhaman, West Bengal</span></div>
+        </div>
+      </div>
+    </div>
+
+    <form id="inquiryForm">
+      <div class="form-row">
+        <div>
+          <label for="name">Name</label>
+          <input id="name" type="text" required>
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" type="tel">
+        </div>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" required>
+      </div>
+      <div>
+        <label for="inquiry">Inquiry type</label>
+        <select id="inquiry">
+          <option>Request a Quote</option>
+          <option>Request a Catalog</option>
+          <option>Product Support</option>
+          <option>Dealership / Bulk Order</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" required placeholder="Tell us what you're looking for — model, quantity, or your question."></textarea>
+      </div>
+      <button class="submit-btn" type="submit">Send Inquiry</button>
+      <p class="form-note">This opens your email app with the message ready to send to wasonakaash5@gmail.com — nothing is sent without you hitting "Send" there.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Wason Instruments</div>
+        <p>An ISO 9001:2015 certified manufacturer of digital grain moisture meters, serving the agribusiness industry since 1999.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:wasonakaash5@gmail.com">wasonakaash5@gmail.com</a></li>
+          <li>98151-67454</li>
+          <li>Jalandhar, Punjab, India</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Wason Instruments. All rights reserved.</span>
+      <span>ISO 9001:2015 Certified</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('navMenu');
+  toggle.addEventListener('click', () => menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+  // Contact form -> opens the visitor's email client addressed to you.
+  // Fully static: no backend, no server, works as-is on GitHub Pages.
+  const form = document.getElementById('inquiryForm');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const email = document.getElementById('email').value;
+    const inquiry = document.getElementById('inquiry').value;
+    const message = document.getElementById('message').value;
+
+    const subject = encodeURIComponent(`${inquiry} — from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nInquiry type: ${inquiry}\n\nMessage:\n${message}`
+    );
+
+    window.location.href = `mailto:wasonakaash5@gmail.com?subject=${subject}&body=${body}`;
+  });
+</script>
+
+</body>
+</html>
